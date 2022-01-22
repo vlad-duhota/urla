@@ -1,0 +1,97 @@
+/* global */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 14px;
+    /* global font size */
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+h1, h2, h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    max-width: 991px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+.header{
+    padding-top: 20px;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.header button{
+    padding: 10px 20px;
+    font-size: 1rem; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+}
+
+.login{
+    border: none;
+}
+
+.sign-up{
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+.hero{
+    height: 100vh;
+    background: url(../img/hero-bg.jpg) center / cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+a{
+    color: inherit;
+}
+
+.hero .container{
+    position: relative;
+    z-index: 2;
+}
+
+.hero::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .8);
+    z-index: 1;
+}
