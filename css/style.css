@@ -37,6 +37,11 @@ h1, h2, h3{
     margin: 0 auto;
 }
 
+.section-title{
+    font-size: 1.57rem;
+    /* 1.4 * 1.57 = 22px */
+}
+
 .header{
     padding-top: 20px;
     position: absolute;
@@ -45,6 +50,10 @@ h1, h2, h3{
     top: 0;
     left: 0;
     text-align: center;
+    color: #fff;
+}
+.header .logo{
+    display: none;
 }
 
 .header button{
@@ -63,6 +72,12 @@ h1, h2, h3{
 .sign-up{
     border: 2px solid #fff;
     border-radius: 15px;
+    transition: .3s;
+}
+
+.sign-up:hover{
+    background: #fff;
+    color: #351a05;
 }
 
 .hero{
@@ -92,6 +107,169 @@ a{
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .5);
     z-index: 1;
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+h1{
+    font-size: 30px;
+    margin: 40px 0 30px;
+    text-transform: uppercase;
+}
+
+.sub-title{
+    font-size: 1.3rem;
+}
+
+.btn{
+    display: block;
+    padding: 15px 0;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #ff4e50;
+    background: #ff4e50;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    transition: background .3s;
+}
+
+.hero .btn:hover{
+    background: #b93032;
+}
+
+.partners{
+    padding: 70px 0 60px;
+    text-align: center;
+}
+
+.partners .section-title{
+    margin-bottom: 20px;
+}
+.partners-item{
+    margin-bottom: 30px;
+}
+.partners-item img{
+    display: inline-block;
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.img-wrap{
+    display: inline-block;
+    position: relative;
+}
+
+.img-wrap::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: url(../img/television.svg) center / 17px no-repeat;
+    background-color: #ff4e50;
+    right: -8px;
+    bottom: -8px;
+}
+
+.partners-item:nth-child(2) .img-wrap::after{
+    background-color: #ffa507;
+}
+.partners-item:nth-child(3) .img-wrap::after{
+    background-color: #1cd7ad;
+}
+.partners-item:nth-child(4) .img-wrap::after{
+    background-color: #4e73db;
+}
+
+.partners-item h3{
+    margin: 20px 0;
+}
+
+.partners-item p{
+    color: #8b8b8b;
+}
+
+.partners .btn{
+    background: #fff;
+    color: #ff4e50;
+    transition: .3s;
+}
+
+.partners .btn:hover{
+    background: #ff4e50;
+    color: #fff;
+}
+
+/* media */
+@media (min-width:578px){
+    .partners-list{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .partners-item{
+        width: 47%;
+    }
+
+    .hero .btn{
+        width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .partners .btn{
+        width: 180px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:768px){
+    .hero .logo{
+        display: none;
+    }
+
+    .header .logo{
+        display: block;
+    }
+
+    .header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1{
+        font-size: 3.7rem;
+        /* 14 * 3.7 = 52px */
+    }
+    .sub-title{
+        font-size: 1.7rem;
+        /* 14 * 1.7 = 24px */
+    }
+}
+
+
+@media (min-width:1024px){
+    .partners-list{
+        width: 100%;
+    }
+
+    .partners-item{
+        width: 22%;
+    }
+
 }
